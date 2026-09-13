@@ -111,7 +111,7 @@ WAN_T2V_CACHE_ROOT = Path(
         "WAN_T2V_CACHE_ROOT",
         (
             "/runpod-volume/huggingface-cache/hub/"
-            "models--PolarApparel--ethrylsynth-wan-2.2-t2v"
+            "models--PolarApparel--ethrylsynth-wan-models"
         ),
     )
 )
@@ -235,7 +235,7 @@ def _resolve_cached_snapshot() -> Path:
     fail_job(
         "RunPod cached model snapshot is missing or incomplete. Configure "
         "the endpoint Model field with https://huggingface.co/PolarApparel/"
-        "ethrylsynth-wan-2.2-t2v"
+        "ethrylsynth-wan-models"
     )
 
 

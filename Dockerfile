@@ -28,13 +28,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # RUNPOD CACHED MODEL CONTRACT
 # =========================
 # Configure the RunPod endpoint Model field with this private repository:
-#   https://huggingface.co/PolarApparel/ethrylsynth-wan-2.2-t2v
+#   https://huggingface.co/PolarApparel/ethrylsynth-wan-models
 #
 # RunPod mounts the active Hugging Face snapshot before the worker starts.
 # handler.py will validate the required files and symlink them into the normal
 # ComfyUI model directories without copying or downloading them during a job.
-ENV WAN_T2V_CACHE_REPO=PolarApparel/ethrylsynth-wan-2.2-t2v
-ENV WAN_T2V_CACHE_ROOT=/runpod-volume/huggingface-cache/hub/models--PolarApparel--ethrylsynth-wan-2.2-t2v
+ENV WAN_T2V_CACHE_REPO=PolarApparel/ethrylsynth-wan-models
+ENV WAN_T2V_CACHE_ROOT=/runpod-volume/huggingface-cache/hub/models--PolarApparel--ethrylsynth-wan-models
 
 # Required weights must come from the RunPod-mounted cache. Prevent libraries
 # from silently downloading substitutes during billed worker execution.
