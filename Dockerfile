@@ -20,8 +20,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
     fonts-dejavu-core \
     && rm -rf /var/lib/apt/lists/* && \
-    ffmpeg -version | head -n 1 && \
-    ffmpeg -hide_banner -filters 2>/dev/null | grep -q drawtext && \
+    ffmpeg -version >/dev/null && \
+    ffmpeg -hide_banner -filters 2>/dev/null | grep drawtext && \
     test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
 
 # =========================
